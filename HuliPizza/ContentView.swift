@@ -42,7 +42,7 @@ struct ContentView: View {
                         Text(19.90, format: .currency(code: "GBP")) //auto currency sign
                     }
                 }
-            }
+            } //d
             
             VStack {
                 if let image = UIImage(named:"0_lg"){ //if theres that image use that, if not, use surfboard one
