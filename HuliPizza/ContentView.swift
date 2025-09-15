@@ -24,11 +24,14 @@ struct ContentView: View {
                 Text("Huli Pizza Company")
                     .background() //adds white background to text
             }
-            
-            Image(systemName: orders.isEmpty ? "cart":"cart.circle.fill") //copy name from SF symbols, cart icon will change if theres something in the cart
-            
+            // labeling cost and the cart item together
+            Label{
+                Text(59.99, format: .currency(code:"GBP"))
+            }icon:{
+                Image(systemName: orders.isEmpty ? "cart":"cart.circle.fill") //copy name from SF symbols, cart icon will change if theres something in the cart
+            }
             HStack {
-                
+                //Label("Cart", systemImage: "cart") //string&image/sf symbol
                 Text("Order Pizza")
                     .font(.title) //to change size of text
                 Spacer()
